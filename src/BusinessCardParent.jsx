@@ -1,5 +1,6 @@
 import {Component} from "react";
 import BusinessCardDisplay from "./BusinessCardDisplay";
+import BusinessCardForm from "./BusinessCardForm";
 
 class BusinessCardParent extends Component {
 	constructor(){
@@ -14,6 +15,9 @@ class BusinessCardParent extends Component {
 
     render(){
         if (this.state.editMode) {
+            return(
+                <BusinessCardForm />
+            )
         }else {
             return (
                 <div>
