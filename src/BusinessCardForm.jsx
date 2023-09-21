@@ -15,7 +15,7 @@ export default class BusinessCardForm extends Component {
             <form>
                 {/* htmlFor instead of for */}
                 <label htmlFor="nameInput">Name:</label>
-                <input type="text" name="nameInput" id="nameInput" />
+                <input type="text" name="nameInput" id="nameInput" value={this.state.name}/>
             </form>
         )
     }
