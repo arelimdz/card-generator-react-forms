@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { Outlet } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import PokemonFetcherPage from './pages/PokemonFetcherPage';
 
 // React Router parts:
 // - BrowserRouter needs to exist higher up in the component tree than whatever we are writing Routes in
@@ -35,6 +36,8 @@ function App() {
           <Route index element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
+        <Route path="/pokemon" element={<PokemonFetcherPage />} />
+        <Route path="/pokemon/:pokemonId" element={<PokemonFetcherPage />} />
 
       </Routes>
 
