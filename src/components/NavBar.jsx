@@ -2,7 +2,7 @@
 // / -- homepage
 // /about/ -- about page 
 // /about/contact --contactpage
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 export default function NavBar(props){
     return(
@@ -10,13 +10,19 @@ export default function NavBar(props){
             <h1>Nav bar</h1>
             <ul>
 				<li>
-					<Link to="/">Home</Link>
+					<NavLink to="/" style={({isActive}) => isActive ? {color:"red"} : undefined}>
+                        Home
+                    </NavLink>
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+                <NavLink to="/about" end style={({isActive}) => isActive ? {color:"red"} : undefined}>
+                        About
+                </NavLink>
 				</li>
 				<li>
-					<Link to="/about/contact">Contact</Link>
+                <NavLink to="/about/contact" style={({isActive}) => isActive ? {color:"red"} : undefined}>
+                    Contact
+                </NavLink>
 				</li>
 			</ul>
 
