@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { Outlet } from 'react-router-dom';
+import NavBar from './components/NavBar';
 
 // React Router parts:
 // - BrowserRouter needs to exist higher up in the component tree than whatever we are writing Routes in
@@ -14,6 +15,8 @@ import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      <h1>This h1 show every where</h1>
+      <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         
